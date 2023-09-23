@@ -27,3 +27,21 @@ jobs:
         run: npm run lint
       - name: test
         run: npm test
+      - name: Coveralls Parallel
+        uses: coverallsapp/github-action@master
+        with:
+          path-to-lcov: coverage/lcov.info
+          github-token: ${{ secrets.github_token }}
+          flag-name: run-${{ matrix.os }}-${{ matrix.node }}
+          parallel: true
+
+  finish:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Coveralls Merge
+        uses: coverallsapp/github-action@master
+        with:
+          path-to-lcov: coverage/lcov.info
+          github-token: ${{ secrets.github_token }}
+          parallel-finished: true
