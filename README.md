@@ -1,6 +1,11 @@
 # AWS SNS Cloudflare Validator
 A package for Cloudflare Workers that validates AWS SNS requests. The request body is parsed and the signature is verified. If the signature is valid, the payload is returned. If the signature is invalid, an error is thrown.
 
+[![Coverage Status](https://coveralls.io/repos/github/devinstewart/sns-cloudflare-validator/badge.svg?branch=main)](https://coveralls.io/github/devinstewart/sns-cloudflare-validator?branch=main)
+[![GitHub Workflow Status](https://github.com/devinstewart/sns-cloudflare-validator/actions/workflows/ci-plugin.yml/badge.svg?branch=main)](https://github.com/devinstewart/sns-cloudflare-validator/actions?query=workflow%3Aci+branch%3Amain)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=devinstewart_sns-cloudflare-validator&metric=sqale_rating)](https://sonarcloud.io/summary/overall?id=devinstewart_sns-cloudflare-validator)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=devinstewart_sns-cloudflare-validator&metric=security_rating)](https://sonarcloud.io/summary/overall?id=devinstewart_sns-cloudflare-validator)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=devinstewart_sns-cloudflare-validator&metric=reliability_rating)](https://sonarcloud.io/summary/overall?id=devinstewart_sns-cloudflare-validator)
 ## Installation
 ```bash
 npm install sns-cloudflare-validator
