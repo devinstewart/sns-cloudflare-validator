@@ -25,7 +25,7 @@ internals.addSignature = (payload, signatureVersion = '1') => {
 
 internals.MessageId = 'edeb3e00-ad32-5092-abe9-67ad99b82fdc';
 internals.TopicArn = 'arn:aws:sns:us-east-1:012345678910:test';
-internals.SubscribeURL = 'https://sns.us-east-1.amazonaws.com/?Action=ConfirmSubscription?MoreStuff=MoreStuff';
+internals.SubscribeURL = signingCertHost + '?Action=ConfirmSubscription&MoreStuff=MoreStuff';
 
 internals.validNotificationSv1 = {
     Type: 'Notification',
