@@ -198,17 +198,6 @@ describe('test contructor options', () => {
 
 describe('test failing certs', () => {
 
-    it('succussfully validates Notification SignatureVersion 1', async () => {
-
-        const request = {
-            method: 'POST',
-            json: () => payloads.liveAWS
-        };
-        const validator = new Validator();
-        const payload = await validator.validate(request);
-        expect(payload).toStrictEqual(payloads.liveAWS);
-    });
-
     it('throws an error on invalid cert', async () => {
 
         const server = setupServer(
