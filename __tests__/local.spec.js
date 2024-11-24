@@ -58,6 +58,18 @@ describe('test validate locally', () => {
         expect(payload).toStrictEqual(payloads.validNotificationSv2);
     });
 
+    it('succussfully validates Notification SignatureVersion 2', async () => {
+
+        const request = {
+            method: 'POST',
+            json: () => payloads.validNotificationSv2
+        };
+        const validator = new Validator({ useCache: false });
+        const payload = await validator.validate(request);
+        expect(payload).toStrictEqual(payloads.validNotificationSv2);
+    });
+
+
     it('succussfully validates Notification with Subject', async () => {
 
         const request = {
