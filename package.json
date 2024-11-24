@@ -1,6 +1,6 @@
 {
   "name": "sns-cloudflare-validator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A plugin for Cloudflare Workers that validates SNS messages",
   "type": "module",
   "main": "lib/index.js",
